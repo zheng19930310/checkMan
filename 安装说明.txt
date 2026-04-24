@@ -1,0 +1,117 @@
+# Python环境安装 - 简单3步
+
+## ⚠️ 重要提示
+
+由于自动安装可能遇到问题，请按以下手动步骤操作：
+
+---
+
+## 第一步：安装Python
+
+### 方式1：使用已下载的安装包（推荐）
+
+1. 打开文件资源管理器
+2. 进入：`d:\aiwork\checkMan\`
+3. 找到文件：`python-3.11.9-amd64.exe`
+4. **双击运行**
+5. ⚠️ **安装界面务必勾选 "Add Python to PATH"**
+6. 点击 "Install Now"
+7. 等待安装完成（约2-3分钟）
+8. 看到 "Setup was successful" 后关闭
+
+### 方式2：重新下载
+
+如果找不到安装包，请：
+
+1. 打开浏览器
+2. 访问：https://www.python.org/downloads/
+3. 点击 "Download Python 3.11.x"
+4. 运行下载的安装程序
+5. **务必勾选 "Add Python to PATH"**
+6. 点击 "Install Now"
+
+---
+
+## 第二步：验证安装
+
+1. **关闭所有命令行窗口**
+2. **重新打开** 一个新的PowerShell或CMD窗口
+3. 运行以下命令：
+
+```powershell
+python --version
+```
+
+应该显示：`Python 3.11.9`
+
+如果显示版本号，说明安装成功！✅
+
+---
+
+## 第三步：安装依赖包
+
+在命令行中运行以下命令（已配置国内清华镜像源）：
+
+```powershell
+# 进入项目目录
+cd d:\aiwork\checkMan
+
+# 配置清华镜像源（加速下载）
+python -m pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 升级pip
+python -m pip install --upgrade pip
+
+# 安装项目依赖
+python -m pip install opencv-python pillow numpy matplotlib
+
+# 或者一次性安装所有依赖
+python -m pip install -r requirements.txt
+```
+
+---
+
+## 第四步：测试运行
+
+```powershell
+# 测试环境
+python test_environment.py
+
+# 运行主程序
+python main_gui.py
+```
+
+---
+
+## 🎯 快速检查清单
+
+安装完成后，你应该能够：
+
+- [ ] 运行 `python --version` 显示版本号
+- [ ] 运行 `pip --version` 显示pip版本
+- [ ] 成功安装 opencv-python
+- [ ] 运行 `python main_gui.py` 启动程序
+
+---
+
+## ❓ 常见问题
+
+### Q: python命令找不到？
+**A:** 重新打开命令行窗口（环境变量需要刷新）
+
+### Q: 安装依赖很慢？
+**A:** 已经配置了清华镜像源，应该会很快
+
+### Q: 安装失败？
+**A:** 检查网络连接，或尝试重新运行安装命令
+
+---
+
+## 📞 需要帮助？
+
+如果遇到问题，请：
+1. 截图错误信息
+2. 告诉我具体哪一步出错了
+3. 我会帮你解决！
+
+祝你安装顺利！🚀
